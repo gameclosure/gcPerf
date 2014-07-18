@@ -1,40 +1,81 @@
 import src.views.BaseTestView as BaseTestView;
+import src.conf.enums as enums;
 
-// TEST 0 CLASS
+from src.conf.enums import *;
+
+var rand2 = Math.random;
+
 var Class0 = Class(function() {
 	this.init = function() {
-		this.propA = 0;
-		this.propB = "stuff";
-		this.propC = {};
-		this.propD = [];
-		this.propE = undefined;
+		this.stuff = 0;
 	};
-
 	this.reset = function() {
-		this.propA = 1000;
-		this.propB = "";
-		this.propC.started = true;
-		this.propD.push(1, 2, 3, 4, 5);
-		this.propE = undefined;
+		for (var i = 0; i < 10; i++) {
+			this.stuff += rand0();
+		}
+		return this.stuff;
 	};
 });
 
-// TEST 1 CLASS
 var Class1 = Class(function() {
 	this.init = function() {
-		this.propA = 0;
-		this.propB = "stuff";
-		this.propC = {};
-		this.propD = [];
-		this.propE = void(0);
+		this.stuff = 0;
 	};
-
 	this.reset = function() {
-		this.propA = 1000;
-		this.propB = "";
-		this.propC.started = true;
-		this.propD.push(1, 2, 3, 4, 5);
-		this.propE = void(0);
+		for (var i = 0; i < 10; i++) {
+			this.stuff += rand1();
+		}
+		return this.stuff;
+	};
+});
+
+var Class2 = Class(function() {
+	this.init = function() {
+		this.stuff = 0;
+	};
+	this.reset = function() {
+		for (var i = 0; i < 10; i++) {
+			this.stuff += rand2();
+		}
+		return this.stuff;
+	};
+});
+
+var Class3 = Class(function() {
+	var rand3 = Math.random;
+	this.init = function() {
+		this.stuff = 0;
+	};
+	this.reset = function() {
+		for (var i = 0; i < 10; i++) {
+			this.stuff += rand3();
+		}
+		return this.stuff;
+	};
+});
+
+var Class4 = Class(function() {
+	this.init = function() {
+		this.stuff = 0;
+	};
+	this.reset = function() {
+		var rand4 = Math.random;
+		for (var i = 0; i < 10; i++) {
+			this.stuff += rand4();
+		}
+		return this.stuff;
+	};
+});
+
+var Class5 = Class(function() {
+	this.init = function() {
+		this.stuff = 0;
+	};
+	this.reset = function() {
+		for (var i = 0; i < 10; i++) {
+			this.stuff += enums.rand1();
+		}
+		return this.stuff;
 	};
 });
 
@@ -42,28 +83,42 @@ var TestView = exports = Class(BaseTestView, function(supr) {
 	this.init = function(opts) {
 		opts.hideViews = false;
 		opts.disableLogs = false;
-		// only available in native
 		opts.useMicroseconds = true;
 
-		// setup code if necessary
 		opts.setupFunc = function() {};
 
-		// number of times per tick to run the test function
 		opts.testIters = 10000;
 
-		// list of test functions
 		opts.testFuncs = [
-			// TEST 0
 			function() {
-				var obj0 = new Class0();
-				obj0.reset();
-				return obj0;
+				var obj = new Class0();
+				obj.reset();
+				return obj;
 			},
-			// TEST 1
 			function() {
-				var obj1 = new Class1();
-				obj1.reset();
-				return obj1;
+				var obj = new Class1();
+				obj.reset();
+				return obj;
+			},
+			function() {
+				var obj = new Class2();
+				obj.reset();
+				return obj;
+			},
+			function() {
+				var obj = new Class3();
+				obj.reset();
+				return obj;
+			},
+			function() {
+				var obj = new Class4();
+				obj.reset();
+				return obj;
+			},
+			function() {
+				var obj = new Class5();
+				obj.reset();
+				return obj;
 			}
 		];
 

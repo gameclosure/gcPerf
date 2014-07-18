@@ -6,3 +6,5 @@ BG_HEIGHT = 1024;
 
 // Singleton Controllers
 controller = jsio("import src.controller");
+
+rand0 = Math.random;
