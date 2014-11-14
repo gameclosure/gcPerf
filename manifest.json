@@ -1,43 +1,45 @@
 {
-	"appID": "6e363c4250474b389b4a0ca59302ae7e",
-	"shortName": "gcperf",
-	"title": "gcPerf",
-	"studio": {
-		"domain": "studio.com",
-		"name": "Studio Name"
-	},
-	"supportedOrientations": [
-		"portrait"
-	],
-	"android": {
-		"icons": {
-			"36": "resources/icons/android36.png",
-			"48": "resources/icons/android48.png",
-			"57": "resources/icons/ios57.png",
-			"72": "resources/icons/android72.png",
-			"96": "resources/icons/android96.png",
-			"114": "resources/icons/ios114.png",
-			"144": "resources/icons/ios144.png"
-		},
-		"versionCode": 1
-	},
-	"ios": {
-		"icons": {
-			"36": "resources/icons/android36.png",
-			"48": "resources/icons/android48.png",
-			"57": "resources/icons/ios57.png",
-			"72": "resources/icons/android72.png",
-			"96": "resources/icons/android96.png",
-			"114": "resources/icons/ios114.png",
-			"144": "resources/icons/ios144.png"
-		},
-		"versionCode": 1
-	},
-	"description": "Performance Testing in the devkit + js.io",
-	"splash": {
-		"autoHide": true,
-		"universal": "resources/splash/splash.png"
-	},
-	"version": "1.0.0",
-	"sdkVersion": "release-0.1.46"
+  "android": {
+    "icons": {
+      "114": "resources/icons/ios114.png",
+      "144": "resources/icons/ios144.png",
+      "36": "resources/icons/android36.png",
+      "48": "resources/icons/android48.png",
+      "57": "resources/icons/ios57.png",
+      "72": "resources/icons/android72.png",
+      "96": "resources/icons/android96.png"
+    },
+    "versionCode": 1
+  },
+  "appID": "6e363c4250474b389b4a0ca59302ae7e",
+  "dependencies": {
+    "devkit-core": "https://github.com/gameclosure/devkit-core#v2.0.10"
+  },
+  "description": "Performance Testing in the devkit + js.io",
+  "ios": {
+    "icons": {
+      "114": "resources/icons/ios114.png",
+      "144": "resources/icons/ios144.png",
+      "36": "resources/icons/android36.png",
+      "48": "resources/icons/android48.png",
+      "57": "resources/icons/ios57.png",
+      "72": "resources/icons/android72.png",
+      "96": "resources/icons/android96.png"
+    },
+    "versionCode": 1
+  },
+  "shortName": "gcperf",
+  "splash": {
+    "autoHide": true,
+    "universal": "resources/splash/splash.png"
+  },
+  "studio": {
+    "domain": "studio.com",
+    "name": "Studio Name"
+  },
+  "supportedOrientations": [
+    "portrait"
+  ],
+  "title": "gcPerf",
+  "version": "1.0.0"
 }
